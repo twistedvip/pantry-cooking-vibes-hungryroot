@@ -23,7 +23,11 @@ hungryroot-transform = "pantry_cooking_vibes_hungryroot.transform:main"
 dev = [
     "pytest>=8.0",
     "ruff>=0.8",
+    "ty>=0.0.1a4",
 ]
+
+[tool.uv.sources]
+pantry-cooking-vibes = { path = "../..", editable = true }
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/pantry_cooking_vibes_hungryroot"]
