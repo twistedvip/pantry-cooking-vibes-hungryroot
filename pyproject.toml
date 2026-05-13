@@ -27,7 +27,10 @@ dev = [
 ]
 
 [tool.uv.sources]
-pantry-cooking-vibes = { path = "../..", editable = true }
+# Resolve the core package from GitHub so this scraper can build standalone
+# (CI, fresh clones). For local dev against a sibling checkout, run
+# `uv pip install -e ../..` after `uv sync` to shadow the git pin.
+pantry-cooking-vibes = { git = "https://github.com/twistedvip/pantry-cooking-vibes.git", branch = "main" }
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/pantry_cooking_vibes_hungryroot"]
