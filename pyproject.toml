@@ -16,6 +16,9 @@ dependencies = [
 [project.entry-points."pantry_cooking_vibes.importers"]
 hungryroot = "pantry_cooking_vibes_hungryroot.plugin:HungryrootImporter"
 
+[project.scripts]
+hungryroot-transform = "pantry_cooking_vibes_hungryroot.transform:main"
+
 [project.optional-dependencies]
 dev = [
     "pytest>=8.0",
